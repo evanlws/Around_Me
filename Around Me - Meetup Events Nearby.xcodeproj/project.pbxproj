@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F415B0B1CB7409100C12D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B0A1CB7409100C12D46 /* AppDelegate.swift */; };
-		4F415B0E1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B0C1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodeld */; };
-		4F415B101CB7409100C12D46 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B0F1CB7409100C12D46 /* MasterViewController.swift */; };
-		4F415B121CB7409100C12D46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B111CB7409100C12D46 /* DetailViewController.swift */; };
 		4F415B151CB7409100C12D46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F415B131CB7409100C12D46 /* Main.storyboard */; };
 		4F415B171CB7409100C12D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F415B161CB7409100C12D46 /* Assets.xcassets */; };
 		4F415B1A1CB7409100C12D46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F415B181CB7409100C12D46 /* LaunchScreen.storyboard */; };
@@ -38,9 +35,6 @@
 /* Begin PBXFileReference section */
 		4F415B071CB7409100C12D46 /* Around Me - Meetup Events Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Around Me - Meetup Events Nearby.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F415B0A1CB7409100C12D46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F415B0D1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Around_Me___Meetup_Events_Nearby.xcdatamodel"; sourceTree = "<group>"; };
-		4F415B0F1CB7409100C12D46 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		4F415B111CB7409100C12D46 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4F415B141CB7409100C12D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F415B161CB7409100C12D46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F415B191CB7409100C12D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,13 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				4F415B0A1CB7409100C12D46 /* AppDelegate.swift */,
-				4F415B0F1CB7409100C12D46 /* MasterViewController.swift */,
-				4F415B111CB7409100C12D46 /* DetailViewController.swift */,
 				4F415B131CB7409100C12D46 /* Main.storyboard */,
 				4F415B161CB7409100C12D46 /* Assets.xcassets */,
 				4F415B181CB7409100C12D46 /* LaunchScreen.storyboard */,
 				4F415B1B1CB7409100C12D46 /* Info.plist */,
-				4F415B0C1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodeld */,
 			);
 			path = "Around Me - Meetup Events Nearby";
 			sourceTree = "<group>";
@@ -199,6 +190,7 @@
 				TargetAttributes = {
 					4F415B061CB7409100C12D46 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7ZE54HDXZR;
 					};
 					4F415B1F1CB7409100C12D46 = {
 						CreatedOnToolsVersion = 7.3;
@@ -262,10 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F415B0E1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodeld in Sources */,
 				4F415B0B1CB7409100C12D46 /* AppDelegate.swift in Sources */,
-				4F415B101CB7409100C12D46 /* MasterViewController.swift in Sources */,
-				4F415B121CB7409100C12D46 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,10 +396,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Around Me - Meetup Events Nearby/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Around-Me---Meetup-Events-Nearby";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -418,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Around Me - Meetup Events Nearby/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Around-Me---Meetup-Events-Nearby";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -490,6 +485,7 @@
 				4F415B361CB7409100C12D46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F415B371CB7409100C12D46 /* Build configuration list for PBXNativeTarget "Around Me - Meetup Events NearbyTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +494,7 @@
 				4F415B391CB7409100C12D46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F415B3A1CB7409100C12D46 /* Build configuration list for PBXNativeTarget "Around Me - Meetup Events NearbyUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,21 +503,9 @@
 				4F415B3C1CB7409100C12D46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4F415B0C1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4F415B0D1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodel */,
-			);
-			currentVersion = 4F415B0D1CB7409100C12D46 /* Around_Me___Meetup_Events_Nearby.xcdatamodel */;
-			path = "Around_Me___Meetup_Events_Nearby.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4F415AFF1CB7409100C12D46 /* Project object */;
 }
