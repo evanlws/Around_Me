@@ -13,6 +13,10 @@
 		4F415B1A1CB7409100C12D46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F415B181CB7409100C12D46 /* LaunchScreen.storyboard */; };
 		4F415B251CB7409100C12D46 /* Around_Me___Meetup_Events_NearbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B241CB7409100C12D46 /* Around_Me___Meetup_Events_NearbyTests.swift */; };
 		4F415B301CB7409100C12D46 /* Around_Me___Meetup_Events_NearbyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B2F1CB7409100C12D46 /* Around_Me___Meetup_Events_NearbyUITests.swift */; };
+		4F415B3E1CB74BC600C12D46 /* FetchEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B3D1CB74BC600C12D46 /* FetchEvents.swift */; };
+		4F415B431CB74D7D00C12D46 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B421CB74D7D00C12D46 /* DownloadManager.swift */; };
+		4F415B451CB7532A00C12D46 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B441CB7532A00C12D46 /* Event.swift */; };
+		4F415B471CB771D300C12D46 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B461CB771D300C12D46 /* Venue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		4F415B2B1CB7409100C12D46 /* Around Me - Meetup Events NearbyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Around Me - Meetup Events NearbyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F415B2F1CB7409100C12D46 /* Around_Me___Meetup_Events_NearbyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Around_Me___Meetup_Events_NearbyUITests.swift"; sourceTree = "<group>"; };
 		4F415B311CB7409100C12D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F415B3D1CB74BC600C12D46 /* FetchEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchEvents.swift; sourceTree = "<group>"; };
+		4F415B421CB74D7D00C12D46 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		4F415B441CB7532A00C12D46 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4F415B461CB771D300C12D46 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +103,9 @@
 		4F415B091CB7409100C12D46 /* Around Me - Meetup Events Nearby */ = {
 			isa = PBXGroup;
 			children = (
-				4F415B0A1CB7409100C12D46 /* AppDelegate.swift */,
-				4F415B131CB7409100C12D46 /* Main.storyboard */,
-				4F415B161CB7409100C12D46 /* Assets.xcassets */,
-				4F415B181CB7409100C12D46 /* LaunchScreen.storyboard */,
+				4F415B401CB74BDD00C12D46 /* Model */,
+				4F415B3F1CB74BCC00C12D46 /* View */,
+				4F415B411CB74BEA00C12D46 /* Controller */,
 				4F415B1B1CB7409100C12D46 /* Info.plist */,
 			);
 			path = "Around Me - Meetup Events Nearby";
@@ -120,6 +127,35 @@
 				4F415B311CB7409100C12D46 /* Info.plist */,
 			);
 			path = "Around Me - Meetup Events NearbyUITests";
+			sourceTree = "<group>";
+		};
+		4F415B3F1CB74BCC00C12D46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F415B161CB7409100C12D46 /* Assets.xcassets */,
+				4F415B181CB7409100C12D46 /* LaunchScreen.storyboard */,
+				4F415B131CB7409100C12D46 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4F415B401CB74BDD00C12D46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F415B3D1CB74BC600C12D46 /* FetchEvents.swift */,
+				4F415B421CB74D7D00C12D46 /* DownloadManager.swift */,
+				4F415B441CB7532A00C12D46 /* Event.swift */,
+				4F415B461CB771D300C12D46 /* Venue.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4F415B411CB74BEA00C12D46 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F415B0A1CB7409100C12D46 /* AppDelegate.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F415B451CB7532A00C12D46 /* Event.swift in Sources */,
+				4F415B471CB771D300C12D46 /* Venue.swift in Sources */,
 				4F415B0B1CB7409100C12D46 /* AppDelegate.swift in Sources */,
+				4F415B431CB74D7D00C12D46 /* DownloadManager.swift in Sources */,
+				4F415B3E1CB74BC600C12D46 /* FetchEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

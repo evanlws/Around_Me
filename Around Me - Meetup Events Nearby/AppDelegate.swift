@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    DownloadManager.sharedInstance.startDownload(forCategory: EventCategories.Technology)
     return true
   }
 
