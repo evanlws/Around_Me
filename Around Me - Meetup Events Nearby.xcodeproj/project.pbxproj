@@ -118,7 +118,6 @@
 			children = (
 				4F415B401CB74BDD00C12D46 /* Model */,
 				4F415B3F1CB74BCC00C12D46 /* View */,
-				4F415B411CB74BEA00C12D46 /* Controller */,
 				4F415B1B1CB7409100C12D46 /* Info.plist */,
 				4F415B4A1CB88C5600C12D46 /* CoreLocation.framework */,
 			);
@@ -160,6 +159,7 @@
 				4F415B421CB74D7D00C12D46 /* DownloadManager.swift */,
 				4F415B481CB88C3C00C12D46 /* LocationManager.swift */,
 				4F415B3D1CB74BC600C12D46 /* FetchEvents.swift */,
+				4F415B411CB74BEA00C12D46 /* Controller */,
 				4F415B441CB7532A00C12D46 /* Event.swift */,
 				4F415B461CB771D300C12D46 /* Venue.swift */,
 			);

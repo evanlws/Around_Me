@@ -5,7 +5,7 @@
 //  Created by Evan Lewis on 4/8/16.
 //  Copyright © 2016 Evan Lewis. All rights reserved.
 //
-// Class responsible for updating the users location, based upon their search preference wether it be zip code or lat and lon
+//  Class responsible for updating the users location, based upon their search preference wether it be zip code or lat and lon
 
 import Foundation
 import CoreLocation

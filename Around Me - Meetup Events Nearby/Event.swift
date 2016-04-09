@@ -30,7 +30,7 @@ class Event {
     
     let formatter = NSDateFormatter()
     formatter.dateStyle = NSDateFormatterStyle.LongStyle
-    formatter.timeStyle = .MediumStyle
+    formatter.timeStyle = .ShortStyle
     self.formattedTime = formatter.stringFromDate(time)
   }
   
