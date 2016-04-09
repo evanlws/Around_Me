@@ -56,11 +56,11 @@ class FetchEvents : NSOperation, NSURLSessionDelegate {
               guard let groupName = group["name"] as? String else { continue }
               
               guard let venueName = venue["name"] as? String,
-              let venueId = venue["id"] as? Int,
-              let country = venue["localized_country_name"]  as? String,
-              let city = venue["city"] as? String,
-              let address = venue["address_1"] as? String,
-              let state = venue["state"] as? String else { continue }
+                let venueId = venue["id"] as? Int,
+                let country = venue["localized_country_name"]  as? String,
+                let city = venue["city"] as? String,
+                let address = venue["address_1"] as? String,
+                let state = venue["state"] as? String else { continue }
               
               // Create the object based on the data
               let venueItem = Venue(id: venueId, name: venueName, country: country, city: city, address: address, state: state)
@@ -75,17 +75,22 @@ class FetchEvents : NSOperation, NSURLSessionDelegate {
               
               events.append(eventItem)
             }
-            
-            completion(events: events, error: nil)
+            dispatch_async(dispatch_get_main_queue(), {
+              completion(events: events, error: nil)
+            })
           }
           
         } catch {
-          print("Error with Json: \(error)")
-          completion(events: [Event](), error: error)
+          dispatch_async(dispatch_get_main_queue(), {
+            print("Error with Json: \(error)")
+            completion(events: [Event](), error: error)
+          })
         }
       } else {
-        print("ERROR: \(statusCode)")
-        completion(events: [Event](), error: error)
+        dispatch_async(dispatch_get_main_queue(), {
+          print("ERROR: \(statusCode)")
+          completion(events: [Event](), error: error)
+        })
       }
     }
     task.resume()

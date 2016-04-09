@@ -20,6 +20,7 @@
 		4F415B491CB88C3C00C12D46 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B481CB88C3C00C12D46 /* LocationManager.swift */; };
 		4F415B4B1CB88C5600C12D46 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F415B4A1CB88C5600C12D46 /* CoreLocation.framework */; };
 		4F415B4D1CB89AE600C12D46 /* LocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B4C1CB89AE600C12D46 /* LocationInfoViewController.swift */; };
+		4F415B4F1CB8D65000C12D46 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4F415B481CB88C3C00C12D46 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4F415B4A1CB88C5600C12D46 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4F415B4C1CB89AE600C12D46 /* LocationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
+		4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				4F415B0A1CB7409100C12D46 /* AppDelegate.swift */,
 				4F415B4C1CB89AE600C12D46 /* LocationInfoViewController.swift */,
+				4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				4F415B491CB88C3C00C12D46 /* LocationManager.swift in Sources */,
 				4F415B0B1CB7409100C12D46 /* AppDelegate.swift in Sources */,
 				4F415B431CB74D7D00C12D46 /* DownloadManager.swift in Sources */,
+				4F415B4F1CB8D65000C12D46 /* EventsTableViewController.swift in Sources */,
 				4F415B3E1CB74BC600C12D46 /* FetchEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

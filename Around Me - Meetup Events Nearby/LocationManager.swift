@@ -9,12 +9,6 @@
 import Foundation
 import CoreLocation
 
-enum LocationError: ErrorType {
-  case FailedToFetchCoordinates
-  case InvalidCoordinates
-  case InvalidZipCode
-}
-
 class LocationManager: NSObject {
   
   static let sharedInstance = LocationManager()
@@ -28,11 +22,9 @@ class LocationManager: NSObject {
    locationSearchString = "&lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)"
   }
   
-  func setZipCode(zipCode: String) throws {
+  func setZipCode(zipCode: String) {
     if zipCode.characters.count > 1 {
-      locationSearchString = "&zip=10002"
-    } else {
-      throw LocationError.InvalidZipCode
+      locationSearchString = "&zip=\(zipCode)"
     }
   }
 
