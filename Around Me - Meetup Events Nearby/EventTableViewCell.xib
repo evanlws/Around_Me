@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="100" id="KGk-i7-Jjw" customClass="EventTableViewCell" customModule="Around_Me___Meetup_Events_Nearby" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdd-py-tsL">
+                        <rect key="frame" x="8" y="9" width="304" height="82"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name                                                                    " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLC-Pc-o2J">
+                                <rect key="frame" x="5" y="5" width="294" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="FXN-AL-Vlv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etd-pk-WBb">
+                                <rect key="frame" x="5" y="60" width="294" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="Xbs-iz-Hb9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0to-xb-qTn">
+                                <rect key="frame" x="5" y="27" width="294" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="0Pf-h6-7Fb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="etd-pk-WBb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0to-xb-qTn" secondAttribute="bottom" constant="5" id="835-Pc-NXQ"/>
+                            <constraint firstItem="dLC-Pc-o2J" firstAttribute="leading" secondItem="mdd-py-tsL" secondAttribute="leading" constant="5" id="8L1-Pr-a5g"/>
+                            <constraint firstAttribute="trailing" secondItem="etd-pk-WBb" secondAttribute="trailing" constant="5" id="C2S-6V-paU"/>
+                            <constraint firstItem="etd-pk-WBb" firstAttribute="leading" secondItem="dLC-Pc-o2J" secondAttribute="leading" id="Du1-BK-sw1"/>
+                            <constraint firstAttribute="trailing" secondItem="dLC-Pc-o2J" secondAttribute="trailing" constant="5" id="FJs-PW-7Pq"/>
+                            <constraint firstItem="0to-xb-qTn" firstAttribute="top" secondItem="dLC-Pc-o2J" secondAttribute="bottom" id="MHz-eE-gT6"/>
+                            <constraint firstItem="etd-pk-WBb" firstAttribute="leading" secondItem="0to-xb-qTn" secondAttribute="leading" id="MST-Y5-cVH"/>
+                            <constraint firstAttribute="bottom" secondItem="etd-pk-WBb" secondAttribute="bottom" constant="5" id="QYI-1i-Ukj"/>
+                            <constraint firstItem="0to-xb-qTn" firstAttribute="trailing" secondItem="dLC-Pc-o2J" secondAttribute="trailing" id="Xmy-aZ-05q"/>
+                            <constraint firstItem="etd-pk-WBb" firstAttribute="trailing" secondItem="0to-xb-qTn" secondAttribute="trailing" constant="5" id="jTx-oH-73e"/>
+                            <constraint firstItem="dLC-Pc-o2J" firstAttribute="top" secondItem="mdd-py-tsL" secondAttribute="top" constant="5" id="yxy-fM-Z0N"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jTx-oH-73e"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.89353960752487183" green="0.25763136148452759" blue="0.2723810076713562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="mdd-py-tsL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="16S-TU-WmY"/>
+                    <constraint firstItem="mdd-py-tsL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Ja-TF-HLo"/>
+                    <constraint firstItem="mdd-py-tsL" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="4wi-DP-noS"/>
+                    <constraint firstItem="mdd-py-tsL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="syJ-Ab-hBP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="innerView" destination="mdd-py-tsL" id="TgG-yu-roi"/>
+                <outlet property="locationLabel" destination="0to-xb-qTn" id="GSQ-25-30e"/>
+                <outlet property="nameLabel" destination="dLC-Pc-o2J" id="wYk-51-6qp"/>
+                <outlet property="timeLabel" destination="etd-pk-WBb" id="1SA-yo-1wa"/>
+            </connections>
+            <point key="canvasLocation" x="447" y="288"/>
+        </tableViewCell>
+    </objects>
+</document>
