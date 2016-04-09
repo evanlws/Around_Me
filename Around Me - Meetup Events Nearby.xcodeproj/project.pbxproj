@@ -21,6 +21,8 @@
 		4F415B4B1CB88C5600C12D46 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F415B4A1CB88C5600C12D46 /* CoreLocation.framework */; };
 		4F415B4D1CB89AE600C12D46 /* LocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B4C1CB89AE600C12D46 /* LocationInfoViewController.swift */; };
 		4F415B4F1CB8D65000C12D46 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */; };
+		4F85FA791CB96D830037544B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85FA771CB96D830037544B /* EventTableViewCell.swift */; };
+		4F85FA7A1CB96D830037544B /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F85FA781CB96D830037544B /* EventTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		4F415B4A1CB88C5600C12D46 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4F415B4C1CB89AE600C12D46 /* LocationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
 		4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		4F85FA771CB96D830037544B /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		4F85FA781CB96D830037544B /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				4F415B161CB7409100C12D46 /* Assets.xcassets */,
 				4F415B181CB7409100C12D46 /* LaunchScreen.storyboard */,
 				4F415B131CB7409100C12D46 /* Main.storyboard */,
+				4F85FA781CB96D830037544B /* EventTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				4F415B0A1CB7409100C12D46 /* AppDelegate.swift */,
 				4F415B4C1CB89AE600C12D46 /* LocationInfoViewController.swift */,
 				4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */,
+				4F85FA771CB96D830037544B /* EventTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F85FA7A1CB96D830037544B /* EventTableViewCell.xib in Resources */,
 				4F415B1A1CB7409100C12D46 /* LaunchScreen.storyboard in Resources */,
 				4F415B171CB7409100C12D46 /* Assets.xcassets in Resources */,
 				4F415B151CB7409100C12D46 /* Main.storyboard in Resources */,
@@ -303,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F85FA791CB96D830037544B /* EventTableViewCell.swift in Sources */,
 				4F415B451CB7532A00C12D46 /* Event.swift in Sources */,
 				4F415B471CB771D300C12D46 /* Venue.swift in Sources */,
 				4F415B4D1CB89AE600C12D46 /* LocationInfoViewController.swift in Sources */,

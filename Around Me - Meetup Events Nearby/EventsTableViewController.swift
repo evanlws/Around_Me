@@ -13,6 +13,16 @@ class EventsTableViewController: UITableViewController {
   var events = [Event]()
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
+  override func awakeFromNib() {
+    
+    //Load xib files
+    let eventNib = UINib(nibName: "EventTableViewCell", bundle: nil)
+    tableView.registerNib(eventNib, forCellReuseIdentifier: "eventCell")
+    
+    super.awakeFromNib()
+    
+  }
+  
   override func viewDidAppear(animated: Bool) {
     self.activityIndicator.startAnimating()
     DownloadManager.sharedInstance.downloadEvents(forCategory: EventCategories.Technology) { (events, error) in
@@ -20,6 +30,10 @@ class EventsTableViewController: UITableViewController {
       self.tableView.reloadData()
       self.activityIndicator.stopAnimating()
     }
+  }
+  
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 100
   }
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -31,10 +45,16 @@ class EventsTableViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let eventCell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath)
-    eventCell.textLabel?.text = events[indexPath.row].name
-    eventCell.detailTextLabel?.text = events[indexPath.row].formattedTime
+    let event = events[indexPath.row]
+    let eventCell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventTableViewCell
+    eventCell.nameLabel.text = event.name
+    eventCell.locationLabel.text = event.venue.address
+    eventCell.timeLabel.text = event.formattedTime
     return eventCell
+  }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
   
   override func viewWillDisappear(animated: Bool) {
