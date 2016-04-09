@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="Y3c-dg-Q0Z">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1024" id="Xu7-2S-ViE"/>
+                                    <constraint firstAttribute="width" secondItem="Y3c-dg-Q0Z" secondAttribute="height" multiplier="1:1" id="Y4h-lO-9jx"/>
+                                    <constraint firstAttribute="height" constant="256" id="kxK-zi-da3"/>
+                                    <constraint firstAttribute="width" constant="200" id="sN5-cP-yBn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xu7-2S-ViE"/>
+                                        <exclude reference="kxK-zi-da3"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91425800323486328" green="0.33078935742378235" blue="0.3495943546295166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y3c-dg-Q0Z" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HVJ-aN-zQE"/>
+                            <constraint firstItem="Y3c-dg-Q0Z" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="g9v-Qg-NZk"/>
+                            <constraint firstItem="Y3c-dg-Q0Z" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="152" id="gCM-dF-IAb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gCM-dF-IAb"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +52,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iTunesArtwork" width="1024" height="1024"/>
+    </resources>
 </document>

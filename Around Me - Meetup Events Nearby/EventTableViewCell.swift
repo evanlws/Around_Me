@@ -22,6 +22,7 @@ class EventTableViewCell: UITableViewCell {
     innerView.layer.shadowRadius = 1.0;
   }
   
+  // Set style when the user taps on a cell
   override func setHighlighted(highlighted: Bool, animated: Bool) {
     if highlighted {
       innerView.layer.shadowColor = UIColor.clearColor().CGColor;

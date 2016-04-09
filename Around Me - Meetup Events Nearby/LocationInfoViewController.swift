@@ -26,22 +26,23 @@ class LocationInfoViewController: UIViewController, UITextFieldDelegate {
     
     locationManager.delegate = self
     zipCodeTextField.delegate = self
-
+    
   }
   
   override func viewDidAppear(animated: Bool) {
+    zipCodeTextField.text = ""
+    activityIndicator.stopAnimating()
     LocationManager.sharedInstance.didUpdateLocation = false
   }
   
   // MARK: Actions
   @IBAction func useLocationButtonPressed(sender: UIButton) {
     sender.selected = true
-    
     if CLLocationManager.authorizationStatus() == .NotDetermined {
       locationManager.requestWhenInUseAuthorization()
     } else if CLLocationManager.authorizationStatus() == .Denied {
       sender.selected = false
-    
+      
       // Displays an alert that the user has not allowed location access
       let alertController = UIAlertController(title: "Location Services is disabled", message: "For this feature, AroundMe needs access to your location. Please turn on Location Servies in your device settings.", preferredStyle: .Alert)
       let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
@@ -82,24 +83,25 @@ extension LocationInfoViewController: CLLocationManagerDelegate {
   
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     guard let lastKnownLocation = locations.last where LocationManager.sharedInstance.didUpdateLocation == false else { return }
-      // Make sure the location is correct
-      refreshCounter += 1
-      useLocationButton.alpha = 0.5
-      activityIndicator.startAnimating()
-    
-      // Once we have an accurate location, set it in the location manager
-      if refreshCounter >= 3 {
-        LocationManager.sharedInstance.setLatAndLong(lastKnownLocation)
-        LocationManager.sharedInstance.didUpdateLocation = true
-        refreshCounter == 0
-        activityIndicator.stopAnimating()
-        useLocationButton.alpha = 1.0
-        // If the user had tapped on the location button, segue
-        if useLocationButton.selected == true {
-          useLocationButton.selected = false
-          self.performSegueWithIdentifier("toEventsTableView", sender: self)
-        }
+    // Make sure the location is correct
+    refreshCounter += 1
+    useLocationButton.alpha = 0.5
+    activityIndicator.startAnimating()
+        
+    // Once we have an accurate location, set it in the location manager
+    if refreshCounter >= 3 {
+      
+      LocationManager.sharedInstance.setLatAndLong(lastKnownLocation)
+      LocationManager.sharedInstance.didUpdateLocation = true
+      refreshCounter == 0
+      activityIndicator.stopAnimating()
+      useLocationButton.alpha = 1.0
+      // If the user had tapped on the location button, segue
+      if useLocationButton.selected == true {
+        useLocationButton.selected = false
+        self.performSegueWithIdentifier("toEventsTableView", sender: self)
       }
+    }
   }
   
   func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {

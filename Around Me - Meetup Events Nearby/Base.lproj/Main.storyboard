@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0m-dE-S1L">
-                                <rect key="frame" x="242" y="111" width="116" height="30"/>
+                                <rect key="frame" x="242" y="106" width="116" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="kjr-Bx-yRE"/>
@@ -47,7 +47,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-Xl-V9k">
                                 <rect key="frame" x="0.0" y="197" width="590" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  e.g 14420" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-qd-lko">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  e.g 11201" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-qd-lko">
                                         <rect key="frame" x="163" y="0.0" width="412" height="31"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -73,28 +73,28 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PA7-bO-MDq">
-                                <rect key="frame" x="366" y="107" width="37" height="37"/>
+                                <rect key="frame" x="366" y="102" width="37" height="37"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to find upcoming technology meetups in your area, AroundMe can use your location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-VT-23D">
-                                <rect key="frame" x="15" y="50" width="570" height="41"/>
+                                <rect key="frame" x="15" y="35" width="570" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90637689828872681" green="0.29478174448013306" blue="0.30869841575622559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91769814491271973" green="0.33501827716827393" blue="0.34958928823471069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sc8-Xl-V9k" firstAttribute="centerX" secondItem="qEq-1D-Dcx" secondAttribute="centerX" id="1FI-no-5zk"/>
-                            <constraint firstItem="RQp-id-i0m" firstAttribute="top" secondItem="f0m-dE-S1L" secondAttribute="bottom" constant="15" id="2SK-v7-YWd"/>
+                            <constraint firstItem="RQp-id-i0m" firstAttribute="top" secondItem="f0m-dE-S1L" secondAttribute="bottom" constant="20" id="2SK-v7-YWd"/>
                             <constraint firstItem="yiz-ya-9kv" firstAttribute="top" secondItem="Fea-VT-23D" secondAttribute="bottom" constant="-122" id="6Zp-hb-WAW"/>
                             <constraint firstItem="RQp-id-i0m" firstAttribute="centerX" secondItem="qEq-1D-Dcx" secondAttribute="centerX" id="8Zx-ig-fuR"/>
                             <constraint firstAttribute="trailing" secondItem="sc8-Xl-V9k" secondAttribute="trailing" constant="10" id="8fN-Py-EGw"/>
-                            <constraint firstItem="f0m-dE-S1L" firstAttribute="top" secondItem="Fea-VT-23D" secondAttribute="bottom" constant="20" id="8yM-3N-ZH2"/>
+                            <constraint firstItem="f0m-dE-S1L" firstAttribute="top" secondItem="Fea-VT-23D" secondAttribute="bottom" constant="30" id="8yM-3N-ZH2"/>
                             <constraint firstItem="f0m-dE-S1L" firstAttribute="centerX" secondItem="qEq-1D-Dcx" secondAttribute="centerX" id="CUw-JZ-NN8"/>
                             <constraint firstItem="Fea-VT-23D" firstAttribute="centerX" secondItem="qEq-1D-Dcx" secondAttribute="centerX" id="G4c-d0-7d6"/>
                             <constraint firstItem="yiz-ya-9kv" firstAttribute="top" secondItem="qEq-1D-Dcx" secondAttribute="top" id="HL2-YC-FMM"/>
-                            <constraint firstItem="Fea-VT-23D" firstAttribute="top" secondItem="Ejf-Xp-3GM" secondAttribute="bottom" constant="50" id="Kjl-MP-6Gc"/>
+                            <constraint firstItem="Fea-VT-23D" firstAttribute="top" secondItem="Ejf-Xp-3GM" secondAttribute="bottom" constant="35" id="Kjl-MP-6Gc"/>
                             <constraint firstAttribute="trailing" secondItem="yiz-ya-9kv" secondAttribute="trailing" id="PaK-P8-xk4"/>
                             <constraint firstItem="PA7-bO-MDq" firstAttribute="centerY" secondItem="f0m-dE-S1L" secondAttribute="centerY" id="Rgk-QP-Krb"/>
                             <constraint firstAttribute="bottom" secondItem="yiz-ya-9kv" secondAttribute="bottom" id="RpW-vM-e26"/>
@@ -141,7 +141,7 @@
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="aPQ-al-kf3">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </activityIndicatorView>
                         <connections>
                             <outlet property="dataSource" destination="XwX-tD-0R8" id="CG0-OV-6RV"/>
@@ -167,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.89353960752487183" green="0.25763136148452759" blue="0.2723810076713562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.90735846757888794" green="0.29679080843925476" blue="0.30714857578277588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

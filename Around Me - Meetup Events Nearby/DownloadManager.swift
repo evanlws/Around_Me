@@ -5,7 +5,7 @@
 //  Created by Evan Lewis on 4/7/16.
 //  Copyright © 2016 Evan Lewis. All rights reserved.
 //
-// Class responsible for sending the network request to the FetchEvents class
+//  Class responsible for sending the network request to the FetchEvents class
 
 import Foundation
 

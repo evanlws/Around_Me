@@ -25,10 +25,21 @@ class EventsTableViewController: UITableViewController {
   
   override func viewDidAppear(animated: Bool) {
     self.activityIndicator.startAnimating()
+    // When the view loads, start the download
     DownloadManager.sharedInstance.downloadEvents(forCategory: EventCategories.Technology) { (events, error) in
       self.events = events
       self.tableView.reloadData()
       self.activityIndicator.stopAnimating()
+      
+      if events.count == 0 {
+        // Go back if there aren't any events
+        let alertController = UIAlertController(title: "No events found for this location", message: "Sorry, we couldn't find any upcoming events in your area", preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: { (action) in
+          self.navigationController?.popViewControllerAnimated(true)
+        })
+        alertController.addAction(alertAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+      }
     }
   }
   
@@ -45,6 +56,7 @@ class EventsTableViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    // Displays information for each event
     let event = events[indexPath.row]
     let eventCell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventTableViewCell
     eventCell.nameLabel.text = event.name

@@ -21,9 +21,11 @@ class FetchEvents : NSOperation, NSURLSessionDelegate {
     
     // Make sure we have a valid url
     guard let url = NSURL(string: urlPath) else {
-      debugPrint("Error, url is invalid")
+      completion(events: [Event](), error: NSError(domain: "Error, url is invalid", code: 100, userInfo: nil ))
       return
     }
+    
+    debugPrint("Trying URL: \(url.absoluteString)")
     
     // Create the session request
     let request = NSMutableURLRequest(URL:url)
