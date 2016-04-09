@@ -12,17 +12,18 @@ class Event {
 
   let id: String
   let time: NSDate
+  let duration: NSTimeInterval
   let name: String
   let groupName: String
   let venue: Venue
   
-  init(id: String, time: NSDate, name: String, groupName: String, venue: Venue) {
+  init(id: String, time: NSDate, duration: NSTimeInterval, name: String, groupName: String, venue: Venue) {
     self.id = id
     self.time = time
+    self.duration = duration
     self.name = name
     self.groupName = groupName
     self.venue = venue
   }
-  
   
 }

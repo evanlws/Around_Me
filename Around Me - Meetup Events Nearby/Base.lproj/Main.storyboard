@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Location Info View Controller-->
         <scene sceneID="WXm-Mk-DBR">
             <objects>
-                <viewController id="dyX-DC-Zon" sceneMemberID="viewController">
+                <viewController id="dyX-DC-Zon" customClass="LocationInfoViewController" customModule="Around_Me___Meetup_Events_Nearby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ejf-Xp-3GM"/>
                         <viewControllerLayoutGuide type="bottom" id="9bU-sr-xrb"/>
