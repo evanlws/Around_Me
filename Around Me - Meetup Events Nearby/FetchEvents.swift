@@ -14,9 +14,9 @@ enum EventCategories: String {
 
 class FetchEvents : NSOperation, NSURLSessionDelegate {
   
-  func fetchEventsForCategory(category: EventCategories, completion:(events: [Event], error: ErrorType?) -> Void) {
+  func fetchEventsForCategory(category: EventCategories, searchString: String, completion:(events: [Event], error: ErrorType?) -> Void) {
     
-    let urlPath = "https://api.meetup.com/2/open_events?key=267d5582f6e8275b405f25a6a7c3f&sign=true&photo-host=secure&zip=10002&topic=\(category.rawValue)&page=50"
+    let urlPath = "https://api.meetup.com/2/open_events?key=267d5582f6e8275b405f25a6a7c3f&sign=true&photo-host=secure\(searchString)&topic=\(category.rawValue)&page=50"
     
     // Make sure we have a valid url
     guard let url = NSURL(string: urlPath) else {
