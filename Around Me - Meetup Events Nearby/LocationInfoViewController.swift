@@ -13,6 +13,7 @@ class LocationInfoViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var useLocationButton: UIButton!
   @IBOutlet weak var zipCodeTextField: UITextField!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   var locationManager = CLLocationManager()
   var events = [Event]()
@@ -25,7 +26,7 @@ class LocationInfoViewController: UIViewController, UITextFieldDelegate {
     
     locationManager.delegate = self
     zipCodeTextField.delegate = self
-  
+
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -38,13 +39,21 @@ class LocationInfoViewController: UIViewController, UITextFieldDelegate {
     
     if CLLocationManager.authorizationStatus() == .NotDetermined {
       locationManager.requestWhenInUseAuthorization()
+    } else if CLLocationManager.authorizationStatus() == .Denied {
+      sender.selected = false
+    
+      // Displays an alert that the user has not allowed location access
+      let alertController = UIAlertController(title: "Location Services is disabled", message: "For this feature, AroundMe needs access to your location. Please turn on Location Servies in your device settings.", preferredStyle: .Alert)
+      let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+      alertController.addAction(alertAction)
+      self.presentViewController(alertController, animated: true, completion: nil)
+      
     }
     
+    // If the Location manager has an updated location, go to the table view
     if LocationManager.sharedInstance.didUpdateLocation == true {
       useLocationButton.selected = false
-      DownloadManager.sharedInstance.downloadEvents(forCategory: EventCategories.Technology, completion: { (events, error) in
-        self.didFetchEvents(events)
-      })
+      self.performSegueWithIdentifier("toEventsTableView", sender: self)
     }
   }
   
@@ -52,29 +61,18 @@ class LocationInfoViewController: UIViewController, UITextFieldDelegate {
     self.view.endEditing(true)
   }
   
+  override func viewWillDisappear(animated: Bool) {
+    activityIndicator.stopAnimating()
+  }
+  
   // MARK: Text Field Delegate
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     if let zip = textField.text {
       LocationManager.sharedInstance.setZipCode(zip)
-      DownloadManager.sharedInstance.downloadEvents(forCategory: EventCategories.Technology, completion: { (events, error) in
-        self.didFetchEvents(events)
-      })
+      self.performSegueWithIdentifier("toEventsTableView", sender: self)
     }
     self.view.endEditing(true)
     return false
-  }
-  
-  // MARK: Navigation
-
-  func didFetchEvents(events: [Event]) {
-    print("Did receive \(events.count) events")
-    self.events = events
-    self.performSegueWithIdentifier("toEventsTableView", sender: self)
-  }
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    guard let eventsTableVC = segue.destinationViewController as? EventsTableViewController where segue.identifier == "toEventsTableView" else { return }
-    eventsTableVC.events = self.events
   }
   
 }
@@ -86,19 +84,20 @@ extension LocationInfoViewController: CLLocationManagerDelegate {
     guard let lastKnownLocation = locations.last where LocationManager.sharedInstance.didUpdateLocation == false else { return }
       // Make sure the location is correct
       refreshCounter += 1
-      useLocationButton.titleLabel?.text = "  Searching... "
-      
+      useLocationButton.alpha = 0.5
+      activityIndicator.startAnimating()
+    
       // Once we have an accurate location, set it in the location manager
-      if refreshCounter == 3 {
+      if refreshCounter >= 3 {
         LocationManager.sharedInstance.setLatAndLong(lastKnownLocation)
         LocationManager.sharedInstance.didUpdateLocation = true
         refreshCounter == 0
-        useLocationButton.titleLabel?.text = "  Use Location  "
+        activityIndicator.stopAnimating()
+        useLocationButton.alpha = 1.0
+        // If the user had tapped on the location button, segue
         if useLocationButton.selected == true {
           useLocationButton.selected = false
-          DownloadManager.sharedInstance.downloadEvents(forCategory: EventCategories.Technology, completion: { (events, error) in
-            self.didFetchEvents(events)
-          })
+          self.performSegueWithIdentifier("toEventsTableView", sender: self)
         }
       }
   }

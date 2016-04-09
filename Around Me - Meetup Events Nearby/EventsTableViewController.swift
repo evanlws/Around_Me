@@ -11,6 +11,16 @@ import UIKit
 class EventsTableViewController: UITableViewController {
   
   var events = [Event]()
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  
+  override func viewDidAppear(animated: Bool) {
+    self.activityIndicator.startAnimating()
+    DownloadManager.sharedInstance.downloadEvents(forCategory: EventCategories.Technology) { (events, error) in
+      self.events = events
+      self.tableView.reloadData()
+      self.activityIndicator.stopAnimating()
+    }
+  }
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
@@ -25,5 +35,9 @@ class EventsTableViewController: UITableViewController {
     eventCell.textLabel?.text = events[indexPath.row].name
     eventCell.detailTextLabel?.text = events[indexPath.row].formattedTime
     return eventCell
+  }
+  
+  override func viewWillDisappear(animated: Bool) {
+    self.activityIndicator.stopAnimating()
   }
 }
