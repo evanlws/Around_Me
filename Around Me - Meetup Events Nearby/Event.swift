@@ -17,6 +17,8 @@ class Event {
   let groupName: String
   let venue: Venue
   
+  let formattedTime: String
+  
   init(id: String, time: NSDate, duration: NSTimeInterval, name: String, groupName: String, venue: Venue) {
     self.id = id
     self.time = time
@@ -24,6 +26,11 @@ class Event {
     self.name = name
     self.groupName = groupName
     self.venue = venue
+    
+    let formatter = NSDateFormatter()
+    formatter.dateStyle = NSDateFormatterStyle.LongStyle
+    formatter.timeStyle = .MediumStyle
+    self.formattedTime = formatter.stringFromDate(time)
   }
   
 }

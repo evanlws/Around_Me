@@ -28,9 +28,8 @@ class LocationInfoViewController: UIViewController {
     LocationManager.sharedInstance.didUpdateLocation = false
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  func didFetchEvents(events: [Event]) {
+    print("Did receive \(events.count) events")
   }
   
 }
@@ -41,13 +40,14 @@ extension LocationInfoViewController: CLLocationManagerDelegate {
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let lastKnownLocation = locations.last where LocationManager.sharedInstance.didUpdateLocation == false {
       refreshCounter += 1
-      print("Did update location: \(lastKnownLocation.coordinate.latitude), \(lastKnownLocation.coordinate.longitude)")
       // Once we have an accurate location, start the download
-      if refreshCounter == 5 {
+      if refreshCounter == 3 {
         LocationManager.sharedInstance.setLatAndLong(lastKnownLocation)
         LocationManager.sharedInstance.didUpdateLocation = true
         refreshCounter == 0
-        DownloadManager.sharedInstance.startDownload(forCategory: EventCategories.Technology)
+        DownloadManager.sharedInstance.downloadEvents(forCategory: EventCategories.Technology, completion: { (events, error) in
+          self.didFetchEvents(events)
+        })
       }
     }
   }
