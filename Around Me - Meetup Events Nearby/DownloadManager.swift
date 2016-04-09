@@ -12,15 +12,21 @@ import Foundation
 class DownloadManager {
   
   static let sharedInstance = DownloadManager()
-  
+   
   func startDownload(forCategory category: EventCategories) {
+    
     let fetchEvents = FetchEvents()
     fetchEvents.fetchEventsForCategory(category) { (events, error) in
       for event in events {
         print(event.name)
         print(event.id)
         print(event.groupName)
-        print(event.time)
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = .MediumStyle
+        print(formatter.stringFromDate(event.time))
+        
         print(event.venue.name)
       }
     }

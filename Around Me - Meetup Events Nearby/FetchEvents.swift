@@ -49,6 +49,7 @@ class FetchEvents : NSOperation, NSURLSessionDelegate {
               guard let id = result["id"] as? String else { continue }
               guard let name = result["name"] as? String else { continue }
               guard let time = result["time"] as? Int else { continue }
+              guard let duration = result["duration"] as? Int else { continue }
               guard let venue = result["venue"] as? NSDictionary else { continue }
               guard let group = result["group"] as? NSDictionary else { continue }
               
@@ -65,11 +66,12 @@ class FetchEvents : NSOperation, NSURLSessionDelegate {
               let venueItem = Venue(id: venueId, name: venueName, country: country, city: city, address: address, state: state)
               
               // Convert the time integer to NSDate
-              let epochSeconds = NSTimeInterval(time)
-              let utcDate = NSDate(timeIntervalSince1970: epochSeconds)
+              let epochSeconds = Double(time / 1000)
+              let epochSecondsTimeInterval = NSTimeInterval(epochSeconds)
+              let utcDate = NSDate(timeIntervalSince1970: epochSecondsTimeInterval)
               
               // Create the event item
-              let eventItem = Event(id: id, time: utcDate, name: name, groupName: groupName, venue: venueItem)
+              let eventItem = Event(id: id, time: utcDate, duration: NSTimeInterval(duration), name: name, groupName: groupName, venue: venueItem)
               
               events.append(eventItem)
             }

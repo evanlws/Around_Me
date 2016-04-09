@@ -142,8 +142,8 @@
 		4F415B401CB74BDD00C12D46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4F415B3D1CB74BC600C12D46 /* FetchEvents.swift */,
 				4F415B421CB74D7D00C12D46 /* DownloadManager.swift */,
+				4F415B3D1CB74BC600C12D46 /* FetchEvents.swift */,
 				4F415B441CB7532A00C12D46 /* Event.swift */,
 				4F415B461CB771D300C12D46 /* Venue.swift */,
 			);
