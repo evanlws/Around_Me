@@ -26,7 +26,6 @@ class LocationManager: NSObject {
   
   func setLatAndLong(location: CLLocation) {
    locationSearchString = "&lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)"
-    debugPrint("Setting lat and long \(location.coordinate.latitude), \(location.coordinate.longitude)")
   }
   
   func setZipCode(zipCode: String) throws {
