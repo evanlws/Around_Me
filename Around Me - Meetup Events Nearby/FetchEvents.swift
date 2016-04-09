@@ -5,6 +5,7 @@
 //  Created by Evan Lewis on 4/7/16.
 //  Copyright © 2016 Evan Lewis. All rights reserved.
 //
+// Class responsible for handling the network request, and after passes it back to the DownloadManager
 
 import Foundation
 

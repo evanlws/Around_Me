@@ -5,6 +5,7 @@
 //  Created by Evan Lewis on 4/7/16.
 //  Copyright © 2016 Evan Lewis. All rights reserved.
 //
+// Event model object
 
 import Foundation
 

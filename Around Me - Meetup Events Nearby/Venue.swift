@@ -5,6 +5,7 @@
 //  Created by Evan Lewis on 4/8/16.
 //  Copyright © 2016 Evan Lewis. All rights reserved.
 //
+// Venue model object 
 
 import Foundation
 
