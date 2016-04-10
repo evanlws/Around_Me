@@ -66,7 +66,15 @@ class EventsTableViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    self.performSegueWithIdentifier("toEventDetails", sender: self)
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+  
+  // MARK: Navigation
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if let eventVC = segue.destinationViewController as? EventViewController where segue.identifier == "toEventDetails", let indexPath = self.tableView.indexPathForSelectedRow {
+      eventVC.event = events[indexPath.row]
+    }
   }
   
   override func viewWillDisappear(animated: Bool) {
