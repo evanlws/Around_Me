@@ -23,6 +23,7 @@
 		4F415B4F1CB8D65000C12D46 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */; };
 		4F85FA791CB96D830037544B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85FA771CB96D830037544B /* EventTableViewCell.swift */; };
 		4F85FA7A1CB96D830037544B /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F85FA781CB96D830037544B /* EventTableViewCell.xib */; };
+		4FBD590C1CB9CEB5008C823E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD590B1CB9CEB5008C823E /* EventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		4F85FA771CB96D830037544B /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		4F85FA781CB96D830037544B /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		4FBD590B1CB9CEB5008C823E /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				4F415B401CB74BDD00C12D46 /* Model */,
 				4F415B3F1CB74BCC00C12D46 /* View */,
+				4F415B411CB74BEA00C12D46 /* Controller */,
 				4F415B1B1CB7409100C12D46 /* Info.plist */,
 				4F415B4A1CB88C5600C12D46 /* CoreLocation.framework */,
 			);
@@ -159,7 +162,6 @@
 				4F415B421CB74D7D00C12D46 /* DownloadManager.swift */,
 				4F415B481CB88C3C00C12D46 /* LocationManager.swift */,
 				4F415B3D1CB74BC600C12D46 /* FetchEvents.swift */,
-				4F415B411CB74BEA00C12D46 /* Controller */,
 				4F415B441CB7532A00C12D46 /* Event.swift */,
 				4F415B461CB771D300C12D46 /* Venue.swift */,
 			);
@@ -173,6 +175,7 @@
 				4F415B4C1CB89AE600C12D46 /* LocationInfoViewController.swift */,
 				4F415B4E1CB8D65000C12D46 /* EventsTableViewController.swift */,
 				4F85FA771CB96D830037544B /* EventTableViewCell.swift */,
+				4FBD590B1CB9CEB5008C823E /* EventViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				4F415B471CB771D300C12D46 /* Venue.swift in Sources */,
 				4F415B4D1CB89AE600C12D46 /* LocationInfoViewController.swift in Sources */,
 				4F415B491CB88C3C00C12D46 /* LocationManager.swift in Sources */,
+				4FBD590C1CB9CEB5008C823E /* EventViewController.swift in Sources */,
 				4F415B0B1CB7409100C12D46 /* AppDelegate.swift in Sources */,
 				4F415B431CB74D7D00C12D46 /* DownloadManager.swift in Sources */,
 				4F415B4F1CB8D65000C12D46 /* EventsTableViewController.swift in Sources */,
